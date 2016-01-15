@@ -32,7 +32,7 @@ set ignorecase                                               " case-insensitive 
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
 set list                                                     " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
+set listchars=tab:▸\ ,trail:•,precedes:<,extends:>
 set number                                                   " show line numbers
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
@@ -44,6 +44,7 @@ set tabstop=8                                                " actual tabs occup
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
+set cursorline
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
@@ -132,6 +133,13 @@ if (&t_Co == 256 || has('gui_running'))
     colorscheme desert
   endif
 endif
+
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 
 " airline 
 let g:airline_powerline_fonts = 1

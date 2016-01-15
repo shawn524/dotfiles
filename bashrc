@@ -1,7 +1,6 @@
 #[ -n "$PS1" ] && source ~/.bash_profile
 
 alias tmuxn='tmux new-session -s'
-alias tmuxc=tmuxc
 alias pgstart='postgres -D /usr/local/var/postgres'
 
 alias bx='bundle exec'
