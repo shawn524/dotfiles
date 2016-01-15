@@ -1,0 +1,38 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Shawn Hanna
+#	email = shawn524@gmail.com 
+[user]
+	name = "Shawn "
+	email = shawn524@gmail.com
+	github = shawn524
+[color]
+	ui = always
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = yellow
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+[core]
+	editor = vim
+	excludesfile = /Users/admin/.gitignore_global
+[push]
+	default = current
+[commit]
+	template = /Users/admin/.gitmessage.txt
+[alias]
+	sha = rev-parse HEAD
+	last = log -1 HEAD --oneline --decorate
+	ll = log --oneline --decorate
+	set-master = branch --set-upstream-to=origin/master master
+	back = reset --soft HEAD~1
+	again = commit -c ORIG_HEAD
+	deploy = subtree push --prefix dist/ origin gh-pages
+[github]
+	user = shawn524
+[ghi]
+	token = !security find-internet-password -a shawn524 -s github.com -l 'ghi token' -w
