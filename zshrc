@@ -82,22 +82,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias zshconfig="vim ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias reload=". ~/.zshrc && echo 'zshrc reloaded'"
 alias tmuxn='tmux new-session -s'
 alias pgstart='postgres -D /usr/local/var/postgres'
+alias v='mvim -v'
+alias vim='mvim -v'
 
+alias gs='git status'
 alias bx='bundle exec'
-alias g='git'
-alias gaa='g add -A'
-alias gcm='g commit -m'
-alias gs='g status'
-alias gcb='g checkout -b'
-alias gfu='g fetch upstream'
-alias gm='g merge'
 alias rc='rails console'
 alias rs='rails server'
 alias bi='bundle install'
-alias v='vim'
 alias mysqlstart='mysql.server start'
 alias u='cd ../'
 alias uu='cd ../../'

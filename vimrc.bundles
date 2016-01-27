@@ -22,6 +22,8 @@ Plugin 'vim-scripts/Align'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'Shougo/neocomplete.vim'
 
 " Themes
 Plugin 'w0ng/vim-hybrid'
