@@ -175,3 +175,6 @@ noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo '
 " Get out of input on jj and kk
 inoremap jj <ESC>
 inoremap kk <ESC>
+
+" Toggle git-gutter
+nnoremap <leader>gt :GitGutterToggle<CR>
