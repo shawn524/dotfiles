@@ -6,4 +6,3 @@ tags.*
 *.swp
 .VimballRecord
 view
-vim/backups/*
