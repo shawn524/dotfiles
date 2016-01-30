@@ -1,4 +1,8 @@
-.vim
-vim/
+.vim/bundle
+vim/bundle
 tags
 tags.*
+*~
+*.swp
+.VimballRecord
+view

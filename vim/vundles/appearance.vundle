@@ -1,0 +1,13 @@
+Plugin 'chrisbra/color_highlight.git'
+Plugin 'bling/vim-airline'
+Plugin 'jby/tmux.vim.git'
+Plugin 'morhetz/gruvbox'
+Plugin 'xsunsmile/showmarks.git'
+
+" Themes
+Plugin 'w0ng/vim-hybrid'
+Plugin 'AlessandroYorba/Alduin'
+Plugin 'skwp/vim-colors-solarized'
+
+" Required for Gblame in terminal vim
+Plugin 'godlygeek/csapprox.git'
