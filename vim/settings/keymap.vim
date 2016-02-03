@@ -51,13 +51,10 @@ vmap ,] c[<C-R>"]<ESC>
 " ,{ Surround a word with {braces}
 map ,} ysiw}
 map ,{ ysiw{
-vmap ,} c{ <C-R>" }<ESC>
-vmap ,{ c{<C-R>"}<ESC>
+vmap ,{ c{ <C-R>" }<ESC>
+vmap ,} c{<C-R>"}<ESC>
 
 map ,` ysiw`
-
-" gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
@@ -99,10 +96,13 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
+imap <silent> <C-i>j <%=   %><Esc>3hi
 
 " create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
+imap <silent> <C-i>k <%  %><Esc>2hi
+
+" gary bernhardt's hashrocket
+imap <silent> <C-i>l <space>=><space>
 
 " ============================
 " Shortcuts for everyday tasks
@@ -152,16 +152,9 @@ nnoremap <silent> <C-z> :cp<CR>
 map <C-/> :TComment<CR>
 imap <C-/> <Esc>:TComment<CR>i
 
-" Use numbers to pick the tab you want (like iTerm)
-map <silent> <C-1> :tabn 1<cr>
-map <silent> <C-2> :tabn 2<cr>
-map <silent> <C-3> :tabn 3<cr>
-map <silent> <C-4> :tabn 4<cr>
-map <silent> <C-5> :tabn 5<cr>
-map <silent> <C-6> :tabn 6<cr>
-map <silent> <C-7> :tabn 7<cr>
-map <silent> <C-8> :tabn 8<cr>
-map <silent> <C-9> :tabn 9<cr>
+" Use H and L to move to the previous/next tabpage.
+nnoremap H gT
+nnoremap L gt
 
 " Resize windows with arrow keys
 nnoremap <C-Up> <C-w>+
@@ -178,3 +171,9 @@ inoremap kk <ESC>
 
 " Toggle git-gutter
 nnoremap <leader>gt :GitGutterToggle<CR>
+
+" Paste-mode toggle 
+nnoremap <leader>p :set invpaste paste?<CR>
+
+" Toggle cursorline
+noremap <leader>cl :set cursorline!<CR>

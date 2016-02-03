@@ -27,7 +27,6 @@
 
  * `,t` - CtrlP fuzzy file selector
  * `,b` - CtrlP buffer selector - great for jumping to a file you already have open
- * `Cmd-Shift-M` - jump to method - CtrlP tag search within current buffer
  * `,jm` jump to models. Other `,j` mappings: `,jc` for controllers, `,jh` for helpers, etc. If you think of a concept and a letter, we've got you covered.
  * `Ctrl-n` - NERDTree toggle
  * `Ctrl-\` - Show current file in NERDTree
@@ -36,7 +35,7 @@
 
  * Ctrl-Space to autocomplete. Tab for snipmate snippets.
  * `,#` `,"` `,'` `,]` `,)` `,}` to surround a word in these common wrappers. the # does #{ruby interpolation}. works in visual mode (thanks @cj). Normally these are done with something like `ysw#`
- * `Cmd-'`, `Cmd-"`, `Cmd-]`, `Cmd-)`, etc to change content inside those surrounding marks. You don't have to be inside them (`Alt` in Linux)
+ * `Ctrl-'`, `Ctrl-"`, `Ctrl-]`, `Ctrl-)`, etc to change content inside those surrounding marks. You don't have to be inside them (`Alt` in Linux)
  * `,.` to go to last edit location (same as `'.`) because the apostrophe is hard on the pinky
  * `,ci` to change inside any set of quotes/brackets/etc
 
@@ -71,8 +70,8 @@
  * `Ctrl-l` - align things (type a character/expression to align by, works in visual mode or by itself) (`Alt` in Linux)
  * `:ColorToggle` - turn on #abc123 color highlighting (useful for css)
  * `:Gitv` - Git log browsers
+ * `,gt` - GitGutterToggle
  * `,hi` - show current Highlight group. if you don't like the color of something, use this, then use `hi! link [groupname] [anothergroupname]` in your vimrc.after to remap the color. You can see available colors using `:hi`
- * `,gt` - Go Tidy - tidy up your html code (works on a visual selection)
  * `:Wrap` - wrap long lines (e.g. when editing markdown files)
  * `Ctrl-/` - toggle comments (usually gcc from tComment) (`Alt` in Linux)
  * `gcp` (comment a paragraph)
@@ -80,10 +79,6 @@
 #### Rails & Ruby
 
  * `,vv` and `,cc` to switch between view and controller - these are maps to :Rcontroller and :Rview. Explore the :R<Tab> family of commands for more fun from rails.vim!
- * `,rs` and `,rl` to run rspec or a spec line in iTerm (check iTerm window for results)
- * `,ss` and `,sl` for the same using `spring rspec` which makes your Rails specs faster by caching the Rails env (must have spring gem installed)
- * vim-ruby-refactoring - try `,rem`, `,rel` to extract methods or let statements
- * `Ctrl-s` - Open related spec in a split. Similar to :A and :AV from rails.vim but is also aware of the fast_spec dir and faster to type
  * `:Bopen [gem name]` to navigate to a gem (@tpope/vim-bundler)
  * `,gcp` - Grep Current Partial to find references to the current view partial
  * `,orb` - outer ruby block. takes you one level up from nested blocks (great for rspec)
