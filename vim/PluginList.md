@@ -48,7 +48,6 @@
 * [vim-repeat](https://github.com/tpope/vim-repeat.git)
 * [vim-surround.git](https://github.com/tpope/vim-surround.git)
 * [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
-
 * [csapprox](https://github.com/godlygeek/csapprox.git)
 * [gruvbox](https://github.com/morhetz/gruvbox)
 * [vim-hybrid](https://github.com/w0ng/vim-hybrid)
