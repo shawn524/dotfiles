@@ -1,10 +1,7 @@
 " These Plugins introduce new textobjects into vim,
 " For example the Ruby one introduces the 'r' text object
 " such that 'var' gives you Visual Around Ruby
-Plugin 'austintaylor/vim-indentobject'
-Plugin 'bootleq/vim-textobj-rubysymbol'
-Plugin 'coderifous/textobj-word-column.vim'
 Plugin 'kana/vim-textobj-user'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bootleq/vim-textobj-rubysymbol'
 Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
