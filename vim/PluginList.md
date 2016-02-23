@@ -53,6 +53,7 @@
 * [vim-hybrid](https://github.com/w0ng/vim-hybrid)
 * [Alduin](https://github.com/AlessandroYorba/Alduin)
 * [vim-colors-solarized](https://github.com/skwp/vim-colors-solarized)
+* [emmet-vim](https://github.com/mattn/emmet-vim/blob/master/doc/emmet.txt)
 
 
 ========== DELETED PLUGINS ==========
