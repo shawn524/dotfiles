@@ -54,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/admin/.nvm/versions/node/v5.1.0/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/Users/admin/.nvm/versions/node/v5.1.0/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -102,3 +102,4 @@ alias uu='cd ../../'
 alias uuu='cd ../../../'
 alias uuuu='cd ../../../../'
 alias uuuuu='cd ../../../../../'
+export GOPATH='/Users/admin/code/go'

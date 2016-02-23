@@ -93,3 +93,7 @@ tmp
 # CTags #
 #########
 tags
+
+# VIM #
+#########
+.netrwhist
