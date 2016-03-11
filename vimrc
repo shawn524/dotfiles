@@ -10,7 +10,6 @@ set showmode                    "Show current mode down the bottom
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set expandtab                   " expand tabs to spaces
-set cursorline                  " Like cursor lines
 set ruler                       " show where you are
 
 
