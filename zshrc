@@ -85,6 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#Docker
+eval "$(docker-machine env default)"
+
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 alias reload=". ~/.zshrc && echo 'zshrc reloaded'"
