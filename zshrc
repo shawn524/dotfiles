@@ -6,7 +6,7 @@ export EDITOR='vim'
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,3 +108,6 @@ alias uuu='cd ../../../'
 alias uuuu='cd ../../../../'
 alias uuuuu='cd ../../../../../'
 export GOPATH='/Users/admin/code/go'
+
+alias wttr="curl -4 http://wttr.in/"
+alias listening="lsof -Pan -i tcp -i udp"
