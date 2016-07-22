@@ -8,6 +8,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'AlessandroYorba/Alduin'
 Plugin 'skwp/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 
 " Required for Gblame in terminal vim
 Plugin 'godlygeek/csapprox.git'

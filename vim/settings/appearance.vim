@@ -1,12 +1,17 @@
 " hybrid theme
+" set background=dark
+" colorscheme hybrid
+" let g:hybrid_custom_term_colors = 1
+
+" base16 theme
+colorscheme base16-default-dark
 set background=dark
-colorscheme hybrid
-let g:hybrid_custom_term_colors = 1
+let base16colorspace=256  " Access colors present in 256 colorspace"
 
 " airline·
 let g:airline_powerline_fonts = 1
 set laststatus=2
-let g:airline_theme='hybrid'
+" let g:airline_theme='hybrid'
 
 " cursor line
 highlight Cursor guifg=white guibg=black
