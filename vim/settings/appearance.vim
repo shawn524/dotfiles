@@ -31,7 +31,6 @@ else
 endif
 
 " Enable basic mouse behavior such as resizing buffers.
-set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif

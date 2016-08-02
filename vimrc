@@ -11,6 +11,7 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set expandtab                   " expand tabs to spaces
 set ruler                       " show where you are
+set mouse=n                     " enable mouse in normal mode
 
 
 " This makes vim act like all other editors, buffers can
