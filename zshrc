@@ -120,6 +120,7 @@ alias wttr="curl -4 http://wttr.in/"
 alias listening="lsof -Pan -i tcp -i udp"
 alias code="cd ~/code"
 alias rspec="rspec -fd"
+alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 ##########################################
 ############### Functions ################
