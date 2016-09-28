@@ -63,7 +63,10 @@ plugins=(git brew rails docker npm bower osx z)
 
 # User configuration
 
-export PATH="/Users/admin/.nvm/versions/node/v5.1.0/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/Users/admin/.rbenv/shims:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/admin/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
+export PATH="/Users/admin/.nvm/versions/node/v5.1.0/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/share/npm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
+eval "$(rbenv init -)"
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export NVM_DIR=~/.nvm
   . $(brew --prefix nvm)/nvm.sh
@@ -93,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
 
 
 alias zshrc="vim ~/.zshrc"
