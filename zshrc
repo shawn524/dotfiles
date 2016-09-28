@@ -7,6 +7,9 @@ fi
 export ZSH=/Users/admin/.oh-my-zsh
 export EDITOR='vim'
 
+# load Z
+. ~/.dotfiles/zsh/z.sh
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -56,7 +59,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew rails docker)
+plugins=(git brew rails docker npm bower osx z)
 
 # User configuration
 
