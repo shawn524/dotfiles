@@ -58,7 +58,7 @@ ZSH_THEME="shawn"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github brew rails docker npm bower osx z)
+plugins=(git github brew rails docker npm bower osx z aws)
 
 # User configuration
 
@@ -124,6 +124,7 @@ alias listening="lsof -Pan -i tcp -i udp"
 alias code="cd ~/code"
 alias rspec="rspec -fd"
 alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+alias subl='sublime'
 
 ##########################################
 ############### Functions ################

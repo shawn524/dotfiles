@@ -107,11 +107,6 @@ set smartcase       " ...unless we type a capital
 
 " ================ UI Settings ========================
 
-" hybrid theme
-set background=dark
-colorscheme hybrid
-let g:hybrid_custom_term_colors = 1
-
 " airline·
 let g:airline_powerline_fonts = 1
 let g:airline_theme='hybrid'
