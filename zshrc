@@ -63,7 +63,7 @@ plugins=(git github brew rails docker npm bower osx z aws)
 # User configuration
 
 export PATH="/Users/admin/.nvm/versions/node/v5.1.0/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/share/npm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -125,6 +125,7 @@ alias code="cd ~/code"
 alias rspec="rspec -fd"
 alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias subl='sublime'
+alias ip='curl -4 http://icanhazip.com'
 
 ##########################################
 ############### Functions ################
