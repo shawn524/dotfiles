@@ -62,13 +62,13 @@ plugins=(git github brew rails docker npm bower osx z aws)
 
 # User configuration
 
-export PATH="/Users/admin/.nvm/versions/node/v5.1.0/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/share/npm/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
 eval "$(rbenv init - zsh)"
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export NVM_DIR=~/.nvm
-  . $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+#   . $(brew --prefix nvm)/nvm.sh
 
 source $ZSH/oh-my-zsh.sh
 
