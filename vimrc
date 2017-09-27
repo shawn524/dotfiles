@@ -52,10 +52,13 @@ endif
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=8
+set shiftwidth=4
+" set softtabstop=4
+set tabstop=4
 set expandtab
+
+autocmd FileType javascript,yaml,ruby set expandtab tabstop=2 sw=2
+autocmd FileType sh set expandtab tabstop=4 sw=4
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
