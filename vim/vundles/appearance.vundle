@@ -6,5 +6,8 @@ Plugin 'jby/tmux.vim.git'
 " Themes
 Plugin 'chriskempson/base16-vim'
 
+" Fonts
+Plugin 'ryanoasis/vim-devicons'
+
 " Required for Gblame in terminal vim
 Plugin 'godlygeek/csapprox.git'

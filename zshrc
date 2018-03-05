@@ -66,6 +66,9 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/
 eval "$(rbenv init - zsh)"
 
 
+export AWS_DEFAULT_REGION=us-east-1
+export AWS_ACCOUNT_ID=882999641681
+
 # export MANPATH="/usr/local/man:$MANPATH"
 # export NVM_DIR=~/.nvm
 #   . $(brew --prefix nvm)/nvm.sh
@@ -126,6 +129,7 @@ alias rspec="rspec -fd"
 alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias subl='sublime'
 alias ip='curl -4 http://icanhazip.com'
+alias nl='npm list --depth=0'
 
 ##########################################
 ############### Functions ################
@@ -159,3 +163,10 @@ function mcd {
     mkdir $1 && cd $1
   fi
 }
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

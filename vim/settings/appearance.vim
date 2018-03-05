@@ -1,8 +1,3 @@
-" hybrid theme
-" set background=dark
-" colorscheme hybrid
-" let g:hybrid_custom_term_colors = 1
-
 " base16 theme
 colorscheme base16-default-dark
 set background=dark
@@ -34,3 +29,6 @@ endif
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
+
+" devicons
+set guifont=DroidSansMono_Nerd_Font:h11
