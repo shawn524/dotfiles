@@ -17,14 +17,11 @@ call vundle#rc()
 " let Vundle manage Vundle (required)
 Plugin 'VundleVim/Vundle.vim'
 
-runtime ruby.vundle
-runtime languages.vundle
-runtime git.vundle
 runtime appearance.vundle
-runtime textobjects.vundle
+runtime git.vundle
+runtime improvements.vundle
+runtime languages.vundle
 runtime search.vundle
-runtime project.vundle
-runtime vim-improvements.vundle
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
