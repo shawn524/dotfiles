@@ -1,5 +1,5 @@
-" base16 theme
-colorscheme base16-default-dark
+" dracula theme
+colorscheme dracula
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace"
 

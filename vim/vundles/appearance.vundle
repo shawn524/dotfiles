@@ -1,13 +1,8 @@
-Plugin 'chrisbra/color_highlight.git'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jby/tmux.vim.git'
 
 " Themes
-Plugin 'chriskempson/base16-vim'
+Plugin 'dracula/vim'
 
 " Fonts
 Plugin 'ryanoasis/vim-devicons'
-
-" Required for Gblame in terminal vim
-Plugin 'godlygeek/csapprox.git'
