@@ -1,0 +1,6 @@
+[submodule "colors/konsole"]
+	path = colors/konsole
+	url = git@github.com:dracula/konsole.git
+[submodule "colors/iterm"]
+    path = colors/iterm
+    url = git@github.com:dracula/iterm.git
