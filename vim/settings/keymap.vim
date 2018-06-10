@@ -96,13 +96,13 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-i>j <%=   %><Esc>3hi
+imap <silent> <C-k>j <%=   %><Esc>3hi
 
 " create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-i>k <%  %><Esc>2hi
+imap <silent> <C-k>k <%  %><Esc>2hi
 
 " gary bernhardt's hashrocket
-imap <silent> <C-i>l <space>=><space>
+imap <silent> <C-k>l <space>=><space>
 
 " ============================
 " Shortcuts for everyday tasks
