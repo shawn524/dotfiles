@@ -12,3 +12,6 @@ Plugin 'vim-scripts/Align'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" Auto-complete 
+Plugin 'lifepillar/vim-mucomplete'

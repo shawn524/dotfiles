@@ -12,6 +12,8 @@ set autoread                    "Reload files changed outside vim
 set expandtab                   " expand tabs to spaces
 set ruler                       " show where you are
 set mouse=n                     " enable mouse in normal mode
+set splitbelow
+set splitright
 
 
 " This makes vim act like all other editors, buffers can
@@ -81,7 +83,7 @@ set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
 
-set wildmode=list:longest
+set wildmode=list:longest,list:full
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
@@ -109,10 +111,6 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ UI Settings ========================
-
-" airline·
-let g:airline_powerline_fonts = 1
-let g:airline_theme='hybrid'
 
 " cursor line
 highlight Cursor guifg=white guibg=black
