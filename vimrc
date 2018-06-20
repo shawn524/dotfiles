@@ -54,9 +54,9 @@ endif
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 " set softtabstop=4
-set tabstop=4
+set tabstop=2
 set expandtab
 
 autocmd FileType javascript,yaml,ruby set expandtab tabstop=2 sw=2
@@ -70,6 +70,7 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
+set list
 set listchars=tab:▸\ ,trail:•,precedes:<,extends:>
 
 set nowrap       "Don't wrap lines
@@ -120,6 +121,9 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
+
+" ================ Functions ========================
+cmap w!! w !sudo tee > /dev/null %
 
 
 " ================ Settings Files ========================
