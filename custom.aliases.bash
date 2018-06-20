@@ -8,13 +8,18 @@ alias uuu='cd ../../../'
 alias uuuu='cd ../../../../'
 alias uuuuu='cd ../../../../../'
 
+alias l="exa -l"
+
 alias gaa='g add -A'
+alias gcm='git checkout master'
+alias gcmsg='git commit -v -m'
 alias v='vim'
 alias gs='git status'
 alias bx='bundle exec'
 alias rc='rails console'
 alias rs='rails server'
 alias bi='bundle install'
+alias vim='mvim -v'
 
 alias wttr="curl -4 http://wttr.in/"
 alias listening="lsof -Pan -i tcp -i udp"
@@ -24,6 +29,13 @@ alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias subl='sublime'
 alias ip='curl -4 http://icanhazip.com'
 alias nl='npm list --depth=0'
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+
+export AWS_DEFAULT_REGION=us-east-1
+export AWS_ACCOUNT_ID=882999641681
 
 ##########################################
 ############### Functions ################
@@ -57,3 +69,8 @@ function mcd {
           mkdir $1 && cd $1
         fi
     }
+
+export BASIN_DIR="/Users/admin/code/basin"
+function taillogs() {
+   tail -f "$BASIN_DIR/log/fluentd.log" "$BASIN_DIR/src/manta/log/development.log" "$BASIN_DIR/src/manta/log/development_json.log" "$BASIN_DIR/src/snapper/log/development.log" "$BASIN_DIR/src/snapper/log/development_json.log" "$BASIN_DIR/src/bluefin/log/development.log" "$BASIN_DIR/src/bluefin/log/development_json.log" "/tmp/basin-nginx/nginx-error.log"
+}
