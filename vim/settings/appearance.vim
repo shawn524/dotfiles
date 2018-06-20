@@ -1,12 +1,12 @@
-" base16 theme
-colorscheme base16-default-dark
+" dracula theme
+colorscheme dracula
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace"
 
 " airline·
 let g:airline_powerline_fonts = 1
 set laststatus=2
-" let g:airline_theme='hybrid'
+let g:airline_theme='dracula'
 
 " cursor line
 highlight Cursor guifg=white guibg=black

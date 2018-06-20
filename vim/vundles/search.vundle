@@ -1,4 +1,3 @@
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/IndexedSearch'
-Plugin 'skwp/greplace.vim'
 Plugin 'Lokaltog/vim-easymotion'

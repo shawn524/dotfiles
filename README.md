@@ -14,6 +14,5 @@ _| |_|_   _|_| |_|_   _|_| |_|_   _|_| |_
 ```
 Cut most of the good bits from [YADR](https://github.com/skwp/dotfiles)
 
- - ZSH
  - TMUX
  - VIM

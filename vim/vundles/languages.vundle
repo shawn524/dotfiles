@@ -1,6 +1,5 @@
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'nelstrom/vim-markdown-preview'
-Plugin 'mxw/vim-jsx'
-Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-rails.git'
+Plugin 'vim-ruby/vim-ruby.git'

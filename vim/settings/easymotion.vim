@@ -6,4 +6,4 @@
 let g:EasyMotion_keys='asdfjkoweriop'
 nmap ,<ESC> ,,w
 nmap ,<S-ESC> ,,b
-nmap <Space> ,,w
+nmap <Space><Space> ,,w

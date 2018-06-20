@@ -12,6 +12,8 @@ set autoread                    "Reload files changed outside vim
 set expandtab                   " expand tabs to spaces
 set ruler                       " show where you are
 set mouse=n                     " enable mouse in normal mode
+set splitbelow
+set splitright
 
 
 " This makes vim act like all other editors, buffers can
@@ -52,9 +54,9 @@ endif
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 " set softtabstop=4
-set tabstop=4
+set tabstop=2
 set expandtab
 
 autocmd FileType javascript,yaml,ruby set expandtab tabstop=2 sw=2
@@ -68,6 +70,7 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
+set list
 set listchars=tab:▸\ ,trail:•,precedes:<,extends:>
 
 set nowrap       "Don't wrap lines
@@ -81,7 +84,7 @@ set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
 
-set wildmode=list:longest
+set wildmode=list:longest,list:full
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
@@ -107,12 +110,9 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+map <S-k> <Nop>
 
 " ================ UI Settings ========================
-
-" airline·
-let g:airline_powerline_fonts = 1
-let g:airline_theme='hybrid'
 
 " cursor line
 highlight Cursor guifg=white guibg=black
@@ -121,6 +121,9 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
+
+" ================ Functions ========================
+cmap w!! w !sudo tee > /dev/null %
 
 
 " ================ Settings Files ========================
