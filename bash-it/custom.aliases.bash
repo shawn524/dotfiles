@@ -57,7 +57,7 @@ function mcd {
 }
 
 # OSX
-if [["$OSTYPE" == "darwin*"]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     alias vim='mvim -v'
     alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
     alias subl='sublime'
