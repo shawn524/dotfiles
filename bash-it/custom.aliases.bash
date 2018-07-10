@@ -17,8 +17,8 @@ alias bx='bundle exec'
 alias rc='rails console'
 alias rs='rails server'
 alias bi='bundle install'
+alias gsgd='git stash && git drop'
 
-alias wttr="curl -4 http://wttr.in/"
 alias listening="lsof -Pan -i tcp -i udp"
 alias code="cd ~/code"
 alias rspec="rspec -fd"
@@ -54,6 +54,10 @@ function mcd {
     else
         mkdir $1 && cd $1
     fi
+}
+
+function wttr {
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Danbury}"
 }
 
 # OSX
