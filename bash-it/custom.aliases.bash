@@ -17,7 +17,7 @@ alias bx='bundle exec'
 alias rc='rails console'
 alias rs='rails server'
 alias bi='bundle install'
-alias gsgd='git stash && git drop'
+alias gsgd='git stash && git stash drop'
 
 alias listening="lsof -Pan -i tcp -i udp"
 alias code="cd ~/code"
@@ -57,7 +57,17 @@ function mcd {
 }
 
 function wttr {
-    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Danbury}"
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${2:-Danbury}"
+}
+
+function emojibanner {
+if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: emojibanner Lunch hamburger blank"
+    return 1
+ else
+    figlet -f banner "${1}" | sed -e"s/#/:${2}:/g" | sed -e"s/ /:${3:-blank}:/g" | pbcopy
+fi
 }
 
 # OSX
