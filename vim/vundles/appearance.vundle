@@ -3,6 +3,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Themes
 Plugin 'dracula/vim'
+Plugin 'arcticicestudio/nord-vim'
 
 " Fonts
 Plugin 'ryanoasis/vim-devicons'

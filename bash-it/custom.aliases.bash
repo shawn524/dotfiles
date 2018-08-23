@@ -72,9 +72,7 @@ fi
 
 # OSX
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias vim='mvim -v'
     alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
-    alias subl='sublime'
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin"
     export PATH="/usr/local/opt/node@8/bin:$PATH"
     export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"

@@ -1,12 +1,12 @@
-" dracula theme
-colorscheme dracula
+" theme
+colorscheme nord
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace"
 
 " airline·
 let g:airline_powerline_fonts = 1
 set laststatus=2
-let g:airline_theme='dracula'
+let g:airline_theme='nord'
 
 " cursor line
 highlight Cursor guifg=white guibg=black
