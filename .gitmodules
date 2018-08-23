@@ -1,11 +1,11 @@
 [submodule "colors/iterm"]
-	path = colors/iterm
+	path = colors/iterm/dracula
 	url = git@github.com:dracula/iterm.git
 [submodule "colors/konsole"]
-	path = colors/konsole
+	path = colors/konsole/dracula
 	url = git@github.com:dracula/konsole.git
 [submodule "colors/nord"]
-	path = colors/nord
+	path = colors/iterm/nord
 	url = git@github.com:arcticicestudio/nord-iterm2.git
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
