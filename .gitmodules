@@ -10,3 +10,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "colors/konsole/nord"]
+	path = colors/konsole/nord
+	url = git@github.com:arcticicestudio/nord-konsole.git
