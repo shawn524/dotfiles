@@ -4,3 +4,9 @@
 [submodule "colors/konsole"]
 	path = colors/konsole
 	url = git@github.com:dracula/konsole.git
+[submodule "colors/nord"]
+	path = colors/nord
+	url = git@github.com:arcticicestudio/nord-iterm2.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
