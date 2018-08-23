@@ -28,8 +28,8 @@ alias nl='npm list --depth=0'
 alias dcrun='sudo docker-compose -f /home/admin/code/docker/docker-compose.yml '
 alias dclogs='sudo docker-compose -f /home/admin/code/docker/docker-compose.yml logs -tf --tail="100" '
 
-alias l='exa --long --git --all'
-alias e='exa --long --git --all'
+alias l='exa --long --git --all -F'
+alias e='exa --long --git --all -F'
 
 # Functions
 function gitme() {
