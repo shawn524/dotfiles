@@ -1,4 +1,6 @@
 let g:fzf_command_prefix = 'Fzf'
+let g:fzf_buffers_jump = 1
+
 
 nnoremap <silent> ,ff :FzfFiles<CR>
 
