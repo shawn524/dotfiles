@@ -1,0 +1,16 @@
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'briandoll/change-inside-surroundings.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/Align'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/nerdtree'
+
+" Auto-complete 
+Plug 'lifepillar/vim-mucomplete'

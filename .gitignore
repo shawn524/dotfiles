@@ -1,5 +1,5 @@
-.vim/bundle
-vim/bundle
+vim/autoload/*
+vim/plugged/*
 vim/backups/*
 tags
 tags.*

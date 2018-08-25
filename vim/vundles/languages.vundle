@@ -1,5 +1,0 @@
-Plugin 'sheerun/vim-polyglot'
-Plugin 'jtratner/vim-flavored-markdown.git'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'tpope/vim-rails.git'
-Plugin 'vim-ruby/vim-ruby.git'

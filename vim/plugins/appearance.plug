@@ -1,0 +1,9 @@
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Themes
+Plug 'dracula/vim'
+Plug 'arcticicestudio/nord-vim'
+
+" Fonts
+Plug 'ryanoasis/vim-devicons'

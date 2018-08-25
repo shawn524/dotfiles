@@ -27,11 +27,11 @@ syntax on
 " Change leader to a comma
 let mapleader=","
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+" =============== Plugin Initialization ===============
+" This loads all the plugins specified in ~/.vim/plugins.vim
+" Use Plug plugin to manage all other plugins
+if filereadable(expand("~/.vim/plugins.vim"))
+  source ~/.vim/plugins.vim
 endif
 
 " ================ Turn Off Swap Files ==============
@@ -114,7 +114,7 @@ map <S-k> <Nop>
 
 " ================ UI Settings ========================
 
-" cursor line
+set cursorline
 highlight Cursor guifg=white guibg=black
 highlight iCursor guifg=white guibg=steelblue
 set guicursor=n-v-c:block-Cursor
