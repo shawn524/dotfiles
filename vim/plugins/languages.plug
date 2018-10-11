@@ -1,5 +1,8 @@
 Plug 'sheerun/vim-polyglot'
 Plug 'jtratner/vim-flavored-markdown'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+
+
+" ALE
+Plug 'w0rp/ale'
