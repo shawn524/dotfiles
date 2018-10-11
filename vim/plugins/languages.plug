@@ -6,3 +6,4 @@ Plug 'vim-ruby/vim-ruby'
 
 " ALE
 Plug 'w0rp/ale'
+Plug 'ngmy/vim-rubocop'
