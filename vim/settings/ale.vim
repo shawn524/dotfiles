@@ -19,3 +19,4 @@ let g:ale_fixers = {
 nmap <leader>af <Plug>(ale_fix)
 nmap <silent> <leader>aj :ALENext<cr>
 nmap <silent> <leader>ak :ALEPrevious<cr>
+nmap <leader>at :ALEToggle<cr>
