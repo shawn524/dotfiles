@@ -93,7 +93,7 @@ function git-clean-repo {
     git checkout master &> /dev/null
     git fetch
     git remote prune origin
-    git branch --merged origin/master | grep -v 'master$' | xargs git branch -d
+    git branch --merged origin/master | grep -v 'master$' | gsed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g" | xargs git branch -d
 
     # Now the same, but including remote branches.
     # MERGED_ON_REMOTE=`git branch -r --merged origin/master | sed 's/ *origin\///' | grep -v 'master$'`

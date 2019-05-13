@@ -1,7 +1,6 @@
 vim/autoload/*
 vim/plugged/*
 vim/backups/*
-tags
 tags.*
 *~
 *.swp
