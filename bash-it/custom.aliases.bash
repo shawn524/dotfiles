@@ -62,7 +62,9 @@ function mcd {
 }
 
 function wttr {
-    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${2:-Danbury}"
+    local request="wttr.in/${1-Danbury}"
+    [ "$COLUMNS" -lt 125 ] && request+='?n'
+    curl -H "Accept-Language: ${LANG%_*}" --compressed "$request"
 }
 
 function emojibanner {
