@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
-# Path to the bash it configuration
-export BASH_IT="/Users/admin/.bash_it"
+# If not running interactively, don't do anything
+case $- in
+  *i*) ;;
+    *) return;;
+esac
 
-# Lock and Load a custom theme file
+# Path to the bash it configuration
+export BASH_IT="/home/admin/.bash_it"
+
+# Lock and Load a custom theme file.
+# Leave empty to disable theming.
 # location /.bash_it/themes/
 export BASH_IT_THEME='atomic'
 
@@ -51,7 +58,7 @@ export SCM_CHECK=true
 # Uncomment this to make Bash-it create alias reload.
 # export BASH_IT_RELOAD_LEGACY=1
 
-BASH_IT_CUSTOM="/Users/admin/.dotfiles"
+BASH_IT_CUSTOM="/home/admin/.dotfiles"
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh

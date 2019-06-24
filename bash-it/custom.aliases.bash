@@ -17,11 +17,11 @@ alias bi='bundle install'
 alias listening="lsof -Pan -i tcp -i udp"
 alias code="cd ~/code"
 alias rspec="rspec -fd"
-alias ip='curl -4 http://icanhazip.com'
+alias extip='curl -4 http://icanhazip.com'
 alias nl='npm list --depth=0'
 
-alias dcrun='sudo docker-compose -f /home/admin/code/docker/docker-compose.yml '
-alias dclogs='sudo docker-compose -f /home/admin/code/docker/docker-compose.yml logs -tf --tail="100" '
+alias dcrun='sudo docker-compose -f /home/admin/code/docker-media-server/docker-compose.yml '
+alias dclogs='sudo docker-compose -f /home/admin/code/docker-media-server/docker-compose.yml logs -tf --tail="100" '
 
 alias l='exa --long --git --all -F'
 alias e='exa --long --git --all -F'
