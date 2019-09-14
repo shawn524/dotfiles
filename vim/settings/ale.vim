@@ -7,13 +7,12 @@ let g:ale_lint_on_enter = 0
 let g:ale_fix_on_save = 0
 
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'ruby' : ['rubocop']
+\   'javascript': ['eslint']
 \}
 
+" \   'ruby' : ['rubocop']
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'ruby' : ['rubocop']
+\   'javascript': ['eslint']
 \}
 
 nmap <leader>af <Plug>(ale_fix)

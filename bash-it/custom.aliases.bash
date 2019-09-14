@@ -8,28 +8,33 @@ alias uuu='cd ../../../'
 alias uuuu='cd ../../../../'
 alias uuuuu='cd ../../../../../'
 
-alias gaa='g add -A'
-alias gcm='git checkout master'
-alias gcmsg='git commit -v -m'
 alias v='vim'
-alias gs='git status'
 alias bx='bundle exec'
 alias rc='rails console'
 alias rs='rails server'
 alias bi='bundle install'
-alias gsgd='git stash && git stash drop'
 
 alias listening="lsof -Pan -i tcp -i udp"
 alias code="cd ~/code"
 alias rspec="rspec -fd"
-alias ip='curl -4 http://icanhazip.com'
+alias extip='curl -4 http://icanhazip.com'
 alias nl='npm list --depth=0'
 
-alias dcrun='sudo docker-compose -f /home/admin/code/docker/docker-compose.yml '
-alias dclogs='sudo docker-compose -f /home/admin/code/docker/docker-compose.yml logs -tf --tail="100" '
+alias dcrun='sudo docker-compose -f /home/admin/code/docker-media-server/docker-compose.yml '
+alias dclogs='sudo docker-compose -f /home/admin/code/docker-media-server/docker-compose.yml logs -tf --tail="100" '
 
 alias l='exa --long --git --all -F'
 alias e='exa --long --git --all -F'
+
+# git
+alias gaa='g add -A'
+alias gcm='git checkout master'
+alias gcmsg='git commit -v -m'
+alias gs='git status'
+alias gsgd='git stash && git stash drop'
+alias unstage='git reset HEAD'
+alias gds="git diff --cached"
+alias rebase-branch="git rebase -i `git merge-base master HEAD`"
 
 # Functions
 function gitme() {
@@ -57,7 +62,9 @@ function mcd {
 }
 
 function wttr {
-    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${2:-Danbury}"
+    local request="wttr.in/${1-Danbury}"
+    [ "$COLUMNS" -lt 125 ] && request+='?n'
+    curl -H "Accept-Language: ${LANG%_*}" --compressed "$request"
 }
 
 function emojibanner {
@@ -82,6 +89,28 @@ function colortest {
         echo;
     done
     echo
+}
+
+function git-clean-repo {
+    git checkout master &> /dev/null
+    git fetch
+    git remote prune origin
+    git branch --merged origin/master | grep -v 'master$' | gsed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g" | xargs git branch -d
+
+    # Now the same, but including remote branches.
+    # MERGED_ON_REMOTE=`git branch -r --merged origin/master | sed 's/ *origin\///' | grep -v 'master$'`
+    if [ "$MERGED_ON_REMOTE" ]; then
+        echo "The following remote branches are fully merged and will be removed:"
+        echo $MERGED_ON_REMOTE
+
+        read -p "Continue (y/N)? "
+        if [ "$REPLY" == "y" ]; then
+            git branch -r --merged origin/master | sed 's/ *origin\///' \
+                | grep -v 'master$' | xargs -I% git push origin :% 2>&1 \
+                | grep --colour=never 'deleted'
+            echo "Done!"
+        fi
+    fi
 }
 
 # OSX

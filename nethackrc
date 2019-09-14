@@ -4,9 +4,6 @@
 
 BIND=v:loot,!:untrap,V:terrain
 
-OPTIONS=pettype:dog
-OPTIONS=name:Righnaar
-
 # Booleans
 
 OPTIONS=bones
@@ -34,9 +31,9 @@ OPTIONS=!pushweapon
 OPTIONS=!rest_on_space
 OPTIONS=safe_pet
 OPTIONS=showexp
-OPTIONS=showrace
+OPTIONS=!showrace
 OPTIONS=!showscore
-OPTIONS=silent
+OPTIONS=!silent
 OPTIONS=statushilites
 OPTIONS=sortpack
 OPTIONS=!sparkle
@@ -45,6 +42,7 @@ OPTIONS=time
 OPTIONS=travel
 OPTIONS=use_inverse
 OPTIONS=verbose
+OPTIONS=hitpointbar
 
 # Non-booleans
 
@@ -63,6 +61,8 @@ OPTIONS=scores:5t 2a o
 OPTIONS=sortloot:loot
 OPTIONS=suppress_alert:3.4.3
 
+OPTIONS=name:Righnaar
+OPTIONS=pettype:dog
 OPTIONS=fruit:pomegranate
 OPTIONS=dogname:Rick
 OPTIONS=catname:Salem
@@ -75,17 +75,17 @@ SYMBOLS=S_golem:7
 ## Curses Interface
 ##
 
-OPTIONS=windowtype:curses
-OPTIONS=guicolor
-OPTIONS=align_status:bottom
-OPTIONS=align_message:top
-OPTIONS=popup_dialog
-OPTIONS=windowborders:3
-OPTIONS=petattr:I
-OPTIONS=splash_screen
-OPTIONS=mouse_support
-OPTIONS=perm_invent
-OPTIONS=menu_glyphs
+# OPTIONS=windowtype:curses
+# OPTIONS=guicolor
+# OPTIONS=align_status:bottom
+# OPTIONS=align_message:top
+# OPTIONS=popup_dialog
+# OPTIONS=windowborders:3
+# OPTIONS=petattr:I
+# OPTIONS=splash_screen
+# OPTIONS=mouse_support
+# OPTIONS=perm_invent
+# OPTIONS=menu_glyphs
 
 
 
