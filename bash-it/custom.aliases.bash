@@ -25,6 +25,7 @@ alias dclogs='sudo docker-compose -f /home/admin/code/docker-media-server/docker
 
 alias l='exa --long --git --all -F'
 alias e='exa --long --git --all -F'
+alias r='ranger'
 
 # git
 alias gaa='g add -A'

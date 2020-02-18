@@ -2,6 +2,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jtratner/vim-flavored-markdown'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 
 " ALE
