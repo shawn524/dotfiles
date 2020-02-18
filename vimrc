@@ -14,6 +14,7 @@ set ruler                       " show where you are
 set mouse=n                     " enable mouse in normal mode
 set splitbelow
 set splitright
+set clipboard=unnamedplus
 
 
 " This makes vim act like all other editors, buffers can
@@ -97,7 +98,7 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-"
+
 " ================ Scrolling ========================
 
 set scrolloff=5         "Start scrolling when we're 8 lines away from margins
