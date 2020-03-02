@@ -64,3 +64,8 @@ BASH_IT_CUSTOM="/home/admin/.dotfiles"
 source "$BASH_IT"/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+# Needed by serverless login
+export BROWSER=/usr/bin/firefox

@@ -37,8 +37,9 @@ alias unstage='git reset HEAD'
 alias gds="git diff --cached"
 alias rebase-branch="git rebase -i `git merge-base master HEAD`"
 
+
 # Functions
-function gitme() {
+gitme() {
     local url=$1
     local pathname=$2
     # replace tree/master with trunk
@@ -52,7 +53,7 @@ function gitme() {
     fi
 }
 
-function mcd {
+mcd() {
     if [ ! -n "$1" ]; then
         echo "Enter a directory name"
     elif [ -d $1 ]; then
@@ -62,13 +63,13 @@ function mcd {
     fi
 }
 
-function wttr {
+wttr() {
     local request="wttr.in/${1-Danbury}"
     [ "$COLUMNS" -lt 125 ] && request+='?n'
     curl -H "Accept-Language: ${LANG%_*}" --compressed "$request"
 }
 
-function emojibanner {
+emojibanner() {
 if [ -z "$1" ]; then
     # display usage if no parameters given
     echo "Usage: emojibanner Lunch hamburger blank"
@@ -78,7 +79,7 @@ if [ -z "$1" ]; then
 fi
 }
 
-function colortest {
+colortest() {
     T='gYw'   # The test text
     echo -e "\n                 40m     41m     42m     43m     44m     45m     46m     47m";
     for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' '1;32m' '  33m' '1;33m' '  34m' '1;34m' '  35m' '1;35m' '  36m' '1;36m' '  37m' '1;37m';
@@ -92,7 +93,7 @@ function colortest {
     echo
 }
 
-function git-clean-repo {
+git-clean-repo() {
     git checkout master &> /dev/null
     git fetch
     git remote prune origin
@@ -112,6 +113,11 @@ function git-clean-repo {
             echo "Done!"
         fi
     fi
+}
+
+z() {
+  local dir
+  dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
 }
 
 # OSX
