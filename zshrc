@@ -75,9 +75,19 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux fzf fasd command-not-found jsontools python rails sudo nvm)
+plugins=(git gh tmux fzf fasd command-not-found jsontools python rails sudo nvm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+
+# FPATH
+# set autoload path
+fpath=(~/.zsh "${fpath[@]}")
+
+# move cursor to end of line after history search completion
+autoload -Uz history-search-end kp ks
+
+# every time we load .zshrc, ditch duplicate path entries
+typeset -U PATH fpath
 
 # User configuration
 
@@ -104,7 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshrc='vim ~/.zshrc'
 alias tmuxn='tmux new-session -s'
-# alias v='vim'
 
 alias u='cd ../'
 alias uu='cd ../../'
@@ -112,7 +121,7 @@ alias uuu='cd ../../../'
 alias uuuu='cd ../../../../'
 alias uuuuu='cd ../../../../../'
 
-alias bx='bundle exec'
+alias bert='bundle exec rake test'
 alias rc='rails console'
 alias rs='rails server'
 alias bi='bundle install'
@@ -123,7 +132,8 @@ alias extip='curl -4 http://icanhazip.com'
 alias nl='npm list --depth=0'
 
 alias l='exa --long --git --all -F'
-alias open='thunar'
+alias vv='vim $(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")'
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 
 # git
 alias gaa='g add -A'
@@ -200,6 +210,19 @@ fi
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte-2.91.sh
 fi
+
+PATH="$(python3 -m site --user-base)/bin:${PATH}"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Load pyenv into the shell by adding
+# the following to ~/.zshrc:
+
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-PATH="$(python3 -m site --user-base)/bin:${PATH}"

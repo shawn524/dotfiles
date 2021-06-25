@@ -7,14 +7,19 @@ set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=500                 "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
-set visualbell                  "No sounds
+set belloff=all                  "No sounds
 set autoread                    "Reload files changed outside vim
 set expandtab                   " expand tabs to spaces
 set ruler                       " show where you are
 set mouse=n                     " enable mouse in normal mode
 set splitbelow
 set splitright
-set clipboard=unnamedplus
+
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 
 
 " This makes vim act like all other editors, buffers can

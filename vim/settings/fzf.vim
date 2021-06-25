@@ -8,6 +8,7 @@ nnoremap <silent> ,ff :FzfFiles<CR>
 nnoremap <silent> ,fb :FzfBuffers<cr>
 nnoremap <silent> ,fh :FzfHistory<cr>
 nnoremap <silent> ,fl :FzfLines<cr>
+nnoremap <silent> ,fr :FzfRg<cr>
 
 " Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Rails
@@ -25,6 +26,3 @@ map ,jC :FzfFiles config<CR>
 map ,jV :FzfFiles vendor<CR>
 map ,jF :FzfFiles factories<CR>
 map ,jT :FzfFiles test<CR>
-
-" Stingray
-map ,fn :FzfFiles frontend<CR>

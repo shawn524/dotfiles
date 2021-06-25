@@ -12,7 +12,10 @@
   _|_       _|_|_       _|_|_       _|_
 _| |_|_   _|_| |_|_   _|_| |_|_   _|_| |_
 ```
-Cut most of the good bits from [YADR](https://github.com/skwp/dotfiles)
 
- - TMUX
  - VIM
+ - TMUX
+ - FZF
+ - FASD
+ - RIPGREP
+ - BAT

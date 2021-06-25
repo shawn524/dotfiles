@@ -11,10 +11,10 @@ nnoremap ,yw yiww
 nnoremap ,ow "_diwhp
 
 "make Y consistent with C and D
-nnoremap Y y$
-function! YRRunAfterMaps()
-  nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
-endfunction
+" nnoremap Y y$
+" function! YRRunAfterMaps()
+"   nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
+" endfunction
 
 " Make 0 go to the first character rather than the beginning
 " of the line. When we're programming, we're almost always
@@ -96,7 +96,7 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-k>j <%=   %><Esc>3hi
+imap <silent> <C-k>j <%=  %><Esc>2hi
 
 " create <%= foo %> erb tags using Ctrl-j in edit mode
 imap <silent> <C-k>k <%  %><Esc>2hi
@@ -155,6 +155,9 @@ imap <C-/> <Esc>:TComment<CR>i
 " Use H and L to move to the previous/next tabpage.
 nnoremap H gT
 nnoremap L gt
+
+" Ctrl + T to open a new tab at the end
+nnoremap <C-t> :$tabnew<CR>
 
 " Resize windows with arrow keys
 nnoremap <C-Up> <C-w>+

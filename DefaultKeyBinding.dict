@@ -1,0 +1,41 @@
+{
+  /* ~/Library/KeyBindings/DefaultKeyBinding.dict */
+  /* https://damieng.com/blog/2015/04/24/make-home-end-keys-behave-like-windows-on-mac-os-x */
+  /* https://www.iexplain.org/remap-home-and-end-buttons-for-external-keyboard-on-mac/ */
+
+  /* Home */
+  "\UF729" = "moveToBeginningOfLine:";
+
+  /* End */
+  "\UF72B" = "moveToEndOfLine:";
+
+  /* Shift + Home */
+  "$\UF729" = "moveToBeginningOfLineAndModifySelection:";
+
+  /* Shift + End */
+  "$\UF72B" = "moveToEndOfLineAndModifySelection:";
+
+  /* Ctrl + Home */
+  "^\UF729" = "moveToBeginningOfDocument:";
+
+  /* Ctrl + End */
+  "^\UF72B" = "moveToEndOfDocument:";
+
+  /* Shift + Ctrl + Home */
+  "$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:";
+
+  /* Shift + Ctrl + End */
+  "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:";
+
+  /* Ctrl-Left */
+  "^\UF702" = "moveWordLeft:";
+
+  /* Ctrl-Shift-Left */
+  "^$\UF702" = "moveWordLeftAndModifySelection:";
+
+  /* Ctrl-Right */
+  "^\UF703" = "moveWordRight:";
+
+  /* Ctrl-Shift-Right */
+  "^$\UF703" = "moveWordRightAndModifySelection:";
+}

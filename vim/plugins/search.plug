@@ -1,4 +1,3 @@
-Plug 'rking/ag.vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'junegunn/fzf'
