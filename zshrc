@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enabl Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/shawnhanna/.oh-my-zsh"
+export ZSH="/home/admin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -131,9 +131,10 @@ alias rspec='rspec -fd'
 alias extip='curl -4 http://icanhazip.com'
 alias nl='npm list --depth=0'
 
-alias l='exa --long --git --all -F'
+alias l='exa --long --all -F'
 alias vv='vim $(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+alias bat='bat --theme=base16'
 
 # git
 alias gaa='g add -A'
@@ -212,19 +213,27 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 PATH="$(python3 -m site --user-base)/bin:${PATH}"
+PATH="$HOME/.rbenv/bin:$PATH"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
 # Rustup
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
+
+export BROWSER="firefox"
 
 # Load pyenv into the shell by adding
 # the following to ~/.zshrc:
 
 eval "$(pyenv init -)"
-eval "$(rbenv init -)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/rbenv init - zsh)"
+
+# Homebrew on linux
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(direnv hook zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
