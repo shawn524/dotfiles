@@ -18,7 +18,6 @@ alias extip='curl -4 http://icanhazip.com'
 alias nl='npm list --depth=0'
 
 alias l='exa --long --all -F'
-alias vv='vim $(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias bat='bat --theme=base16'
 

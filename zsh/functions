@@ -21,6 +21,19 @@ colortest() {
     echo
 }
 
+# search for a file in any and all subdirs and open it
+function vv() {
+    filename=$(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")
+    if [ "$filename" != "" ]; then
+        vim "$filename"
+    fi
+}
+
+# find "thing" inside quotes: fquote thing
+function fquote {
+    rg '['"'"'"'']'"$1"'['"'"'"'']'
+}
+
 if which fasd >/dev/null; then
     # install fasd hooks and basic aliases in the shell
     eval "$(fasd --init auto)"
@@ -38,7 +51,7 @@ if which fasd >/dev/null; then
             # if arg1 is a path to existing file then simply open it in the editor
             test -e "$1" && $EDITOR "$@" && return
             # else use fasd and fzf to search for recent files
-            file="$(fasd -Rfl "$*" | fzf -1 -0 --no-sort +m)" && $EDITOR "${file}" || $EDITOR "$@"
+            file="$(fasd -Rfl "$*" | fzf --preview "bat --style=numbers --color=always --line-range :500 {}")" && $EDITOR "${file}" || $EDITOR "$@"
         }
 
         # cd into the directory containing a recently used file

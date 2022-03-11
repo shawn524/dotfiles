@@ -135,6 +135,7 @@ if [[ $# -gt 0 ]]; then
             if ! grep -q tilix /usr/bin/tilix ; then
                 info "installing tilix...";
                 sudo apt --yes install tilix
+                make_link "/usr/share/tilix/schemes/nord.json" "$DOTFILES/colors/tilix/nord.json"
             else success "tilix check"
             fi
             # vim
