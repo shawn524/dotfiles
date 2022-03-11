@@ -15,11 +15,11 @@ set mouse=n                     " enable mouse in normal mode
 set splitbelow
 set splitright
 
-if system('uname -s') == "Darwin\n"
-  set clipboard=unnamed "OSX
-else
-  set clipboard=unnamedplus "Linux
-endif
+" if system('uname -s') == "Darwin\n"
+"   set clipboard=unnamed "OSX
+" else
+"   set clipboard=unnamedplus "Linux
+" endif
 
 
 " This makes vim act like all other editors, buffers can

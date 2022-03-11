@@ -220,7 +220,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
 # Rustup
-# source $HOME/.cargo/env
+source $HOME/.cargo/env
 
 export BROWSER="firefox"
 
@@ -228,7 +228,7 @@ export BROWSER="firefox"
 # the following to ~/.zshrc:
 
 eval "$(pyenv init -)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/rbenv init - zsh)"
+eval "$(rbenv init -)"
 
 # Homebrew on linux
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
