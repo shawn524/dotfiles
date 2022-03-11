@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gh tmux fzf fasd command-not-found jsontools python rails sudo nvm zsh-autosuggestions)
+plugins=(git gh tmux fzf fasd command-not-found python rails sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,104 +112,13 @@ typeset -U PATH fpath
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshrc='vim ~/.zshrc'
-alias tmuxn='tmux new-session -s'
 
-alias u='cd ../'
-alias uu='cd ../../'
-alias uuu='cd ../../../'
-alias uuuu='cd ../../../../'
-alias uuuuu='cd ../../../../../'
+source ~/.zsh/env
+source ~/.zsh/aliases
+source ~/.zsh/functions
 
-alias bert='bundle exec rake test'
-alias rc='rails console'
-alias rs='rails server'
-alias bi='bundle install'
-
-alias listening='lsof -Pan -i tcp -i udp'
-alias rspec='rspec -fd'
-alias extip='curl -4 http://icanhazip.com'
-alias nl='npm list --depth=0'
-
-alias l='exa --long --all -F'
-alias vv='vim $(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")'
-alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
-alias bat='bat --theme=base16'
-
-# git
-alias gaa='g add -A'
-alias gcm='git checkout master'
-alias gcmsg='git commit -v -m'
-alias gs='git status'
-alias gsgd='git stash && git stash drop'
-alias unstage='git reset HEAD'
-alias gds='git diff --cached'
-alias rebase-branch='git rebase -i `git merge-base master HEAD`'
-
-mcd() {
-    if [ ! -n "$1" ]; then
-        echo "Enter a directory name"
-    elif [ -d $1 ]; then
-        echo "\`$1' already exists"
-    else
-        mkdir $1 && cd $1
-    fi
-}
-colortest() {
-    T='gYw'   # The test text
-    echo -e "\n                 40m     41m     42m     43m     44m     45m     46m     47m";
-    for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' '1;32m' '  33m' '1;33m' '  34m' '1;34m' '  35m' '1;35m' '  36m' '1;36m' '  37m' '1;37m';
-    do FG=${FGs// /}
-        echo -en " $FGs \033[$FG  $T  "
-        for BG in 40m 41m 42m 43m 44m 45m 46m 47m;
-        do echo -en "$EINS \033[$FG\033[$BG  $T \033[0m\033[$BG \033[0m";
-        done
-        echo;
-    done
-    echo
-}
-# z() {
-#   local dir
-#   dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
-# }
-
-if which fasd >/dev/null; then
-    # install fasd hooks and basic aliases in the shell
-    eval "$(fasd --init auto)"
-
-    # if there is fzf available use it to search fasd results
-    if which fzf >/dev/null; then
-
-        alias v >/dev/null && unalias v
-        alias vd >/dev/null && unalias vd
-        alias z >/dev/null && unalias z
-
-        # edit given file or search in recently used files
-        function v {
-            local file
-            # if arg1 is a path to existing file then simply open it in the editor
-            test -e "$1" && $EDITOR "$@" && return
-            # else use fasd and fzf to search for recent files
-            file="$(fasd -Rfl "$*" | fzf -1 -0 --no-sort +m)" && $EDITOR "${file}" || $EDITOR "$@"
-        }
-
-        # cd into the directory containing a recently used file
-        function vd {
-            local dir
-            local file
-            file="$(fasd -Rfl "$*" | fzf -1 -0 --no-sort +m)" && dir=$(dirname "$file") && cd "$dir"
-        }
-
-        # cd into given dir or search in recently used dirs
-        function z {
-            [ $# -eq 1 ] && test -d "$1" && cd "$1" && return
-            local dir
-            dir="$(fasd -Rdl "$*" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
-        }
-    fi
-fi
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte-2.91.sh
+  source /etc/profile.d/vte-2.91.sh
 fi
 
 PATH="$(python3 -m site --user-base)/bin:${PATH}"
@@ -221,8 +130,6 @@ eval "$(pyenv init --path)"
 
 # Rustup
 source $HOME/.cargo/env
-
-export BROWSER="firefox"
 
 # Load pyenv into the shell by adding
 # the following to ~/.zshrc:

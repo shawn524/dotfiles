@@ -1,0 +1,33 @@
+alias zshrc='vim ~/.zshrc'
+alias tmuxn='tmux new-session -s'
+
+alias u='cd ../'
+alias uu='cd ../../'
+alias uuu='cd ../../../'
+alias uuuu='cd ../../../../'
+alias uuuuu='cd ../../../../../'
+
+alias bert='bundle exec rake test'
+alias rc='rails console'
+alias rs='rails server'
+alias bi='bundle install'
+
+alias listening='lsof -Pan -i tcp -i udp'
+alias rspec='rspec -fd'
+alias extip='curl -4 http://icanhazip.com'
+alias nl='npm list --depth=0'
+
+alias l='exa --long --all -F'
+alias vv='vim $(fzf --preview "bat --style=numbers --color=always --line-range :500 {}")'
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+alias bat='bat --theme=base16'
+
+# git
+alias gaa='g add -A'
+alias gcm='git checkout master'
+alias gcmsg='git commit -v -m'
+alias gs='git status'
+alias gsgd='git stash && git stash drop'
+alias unstage='git reset HEAD'
+alias gds='git diff --cached'
+alias rebase-branch='git rebase -i `git merge-base master HEAD`'

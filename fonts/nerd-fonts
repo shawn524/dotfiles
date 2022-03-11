@@ -1,1 +1,61 @@
-https://github.com/ryanoasis/nerd-fonts
+#!/bin/bash
+
+FONT_NAME="Meslo"
+
+get_latest_release() {
+  curl -s "https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest" |
+    grep '"tag_name":' |
+    sed -E 's/.*"([^"]+)".*/\1/'
+}
+
+VERSION="$(get_latest_release)"
+INSTALL_PATH="$HOME/.local/share/fonts"
+DL_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/$VERSION/$FONT_NAME.zip"
+
+# download
+echo " "
+echo "Pulling $FONT_NAME $VERSION fonts from the Github repository release..."
+curl -L -O "$DL_URL"
+
+# extract
+echo " "
+echo "Unpacking the font files..."
+if [ -f "$FONT_NAME.zip" ]; then
+    unzip "$FONT_NAME.zip" "$FONT_NAME LG S*.ttf" -x "*Windows*" "*DZ*" -d "$FONT_NAME"
+else
+    echo "Unable to find the pulled archive file.  Install failed."
+    exit 1
+fi
+
+# install
+if [ -d "$FONT_NAME" ]; then
+    echo " "
+    echo "Installing the $FONT_NAME fonts..."
+    # clean up archive file
+    rm "$FONT_NAME.zip"
+
+    # move fonts to install directory
+    echo "Installing $FONT_NAME $VERSION to $INSTALL_PATH"
+    mv "$FONT_NAME/*" "$INSTALL_PATH"
+
+    echo " "
+    echo "Cleaning up..."
+    rm -rf "$FONT_NAME"
+
+    # clear and regenerate font cache
+    echo " "
+    echo "Clearing and regenerating the font cache.  You will see a stream of text as this occurs..."
+    echo " "
+    fc-cache -f -v
+
+    echo " "
+    echo "Testing. You should see the expected install filepaths in the output below..."
+    fc-list | grep "$FONT_NAME"
+
+    echo " "
+    echo "Install of $FONT_NAME $VERSION complete."
+    exit 0
+else
+    echo "Unable to identify the unpacked font directory. Install failed."
+    exit 1
+fi
