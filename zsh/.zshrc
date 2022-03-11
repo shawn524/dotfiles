@@ -76,13 +76,15 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  colored-man-pages
   command-not-found
-  fasd
+  direnv
   fzf
   gh
   git
-  python
+  jsontools
   rails
+  sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -149,8 +151,6 @@ eval "$(rbenv init -)"
 
 # Homebrew on linux
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-eval "$(direnv hook zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

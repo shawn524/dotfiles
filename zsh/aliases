@@ -1,5 +1,6 @@
 alias zshrc='vim ~/.zshrc'
 alias tmuxn='tmux new-session -s'
+alias reload!='omz reload'
 
 alias u='cd ../'
 alias uu='cd ../../'
