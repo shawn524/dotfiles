@@ -50,6 +50,8 @@ lvim.builtin.which_key.mappings["t"] = {
   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
+  t = { "<cmd>TodoTrouble<cr>", "TodoTrouble" },
+  T = { "<cmd>TodoTelescope<cr>", "TodoTelescope" }
 }
 
 -- TODO: User Config for predefined plugins
@@ -189,7 +191,13 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", ",]", "ysiw]", { silent = true })
     end
   },
-
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
 
 }
 
