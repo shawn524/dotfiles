@@ -148,6 +148,7 @@ source $HOME/.cargo/env
 
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+eval "$(zoxide init zsh)"
 
 # Homebrew on linux
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

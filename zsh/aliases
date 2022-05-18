@@ -1,4 +1,4 @@
-alias zshrc='vim ~/.zshrc'
+alias zshrc='lvim ~/.zshrc'
 alias tmuxn='tmux new-session -s'
 alias reload!='omz reload'
 
